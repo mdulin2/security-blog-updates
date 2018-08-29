@@ -1,6 +1,6 @@
-function() {
+function max() {
         var e = Array.prototype.slice.call(arguments),
-            t = e.shift();
+            t = e.shift(); // turns a string into an array of characters.
         return e.reverse().map(function(e, n) {
             return String.fromCharCode(e - t - 45 - n)
         }).join("")

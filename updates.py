@@ -5,6 +5,7 @@ import datefinder
 from datetime import datetime
 import os.path
 import scrapy
+import smtplib
 
 class Blog:
 
@@ -108,7 +109,7 @@ class Updater:
         filename = url.strip("https://").strip("http://").replace("/","")
         return filename + ".txt"
 
-    def read_config(self, filename = "config"):
+    def read_config(self, filename = "Settings.config"):
         file_object = open(filename,"r")
         files_list_per_line = file_object.readlines()
 
@@ -145,10 +146,59 @@ class Updater:
         urls_list = [ datetime.strptime(url.rstrip(),"%Y-%m-%d %H:%M:%S") for url in urls]
         return urls_list
 
+class EmailClient:
+
+    def __init__(self):
+        # set up the SMTP server
+        self.email, self.password = self.get_creditionals("creditionals.config")
+        self.updater_client = Updater("URLList.config")
+        self.email_content = self.set_up_email_content()
+
+        self.server = smtplib.SMTP("smtp.gmail.com", 587)
+        self.server.starttls()
+        self.server.login(self.email, self.password)
+
+    def send_email(self, sender_email):
+        self.server.sendmail(self.email, sender_email, self.email_content)
+        self.close_connection()
+
+    def send_email_group(self, filename):
+        # would be easy to implement; simply just read from a text file of some sort... Then move server.quit to here
+        pass
+
+    def set_up_email_content(self):
+        updated_list = self.updater_client.get_updated_blog_list()
+        #updated_list = ["https://krebsonsecurity.com","https://maxwelldulin.com/blog"]
+        print updated_list
+        msg ="""
+        Hey! Security blogs are amazing! So, here's your custom list of followed blogs that have been updated in the last day:
+
+"""
+        for blog in updated_list:
+            msg += '\t' + blog + '\n'
+
+        msg += "\n Have a wonderful rest of your day; and happy reading!"
+
+        return msg
+
+    def close_connection(self):
+        self.server.quit()
+
+    def get_creditionals(self,filename):
+        file_object = open(filename,"r")
+        files_list_per_line = file_object.readlines()
+
+        files_list_per_line = list(filter(lambda x: x != '\n', files_list_per_line))
+        formatted_file = list(map(lambda x: x.rstrip(),files_list_per_line))
+
+        username = formatted_file[0].replace(" ","").split(":")[1]
+        password = formatted_file[1].strip(" ").replace(" ","").split(":")[1]
+        return username, password
+
 if __name__ == "__main__":
     # need to be able to take in input...
     # need to be able to set up cron job on here, in Python? Lol. So, so, so weird...
-    U = Updater("url_list.txt")
+    E = EmailClient()
+    #E.get_creditionals("creditionals.config")
+    E.send_email("email_to_send")
     #B = Blog("https://blog.bentkowski.info/?view=classic")
-
-    print U.get_updated_blog_list()
