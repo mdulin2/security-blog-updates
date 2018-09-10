@@ -195,7 +195,8 @@ class EmailClient:
         self.updater_client = Updater("Urls.config")
         self.email_content = self.set_up_email_content()
 
-        self.server = smtplib.SMTP("smtp.gmail.com", 587)
+        #self.server = smtplib.SMTP("smtp.gmail.com", 587)
+        self.server = smtplib.SMTP("smtp-mail.outlook.com", 587)
         self.server.starttls()
         self.server.login(self.email, self.password)
 
