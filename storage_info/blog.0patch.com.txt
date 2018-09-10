@@ -1,0 +1,6 @@
+How We Micropatched a Publicly Dropped 0day in Task Scheduler (CVE-UNKNOWN)
+Being Who You Are Can be a Bad Thing if You're a System Service
+0patching Foxit Reader Buffer... Oops... Integer Overflow (CVE-2017-17557)
+Windows Updates Broke Your Networking? Free Micropatches To The Rescue (CVE-2018-8174)
+Security Patching is Hard - Survey Results 2017
+Two Interesting Micropatches For 7-Zip (CVE-2017-17969 and CVE-2018-5996)
