@@ -1,3 +1,5 @@
+from crontab import CronTab
+import os
 from Blog import Blog
 
 class CLI_Config:
@@ -76,7 +78,8 @@ What would you like to do?
 
             elif(decision == '4'):
                 self.show_followed_blogs()
-
+            elif(decision == '5'):
+                self.cron_interactive()
 
     def remove_url(self, url):
         file_object = open("Urls.config","r")
@@ -193,6 +196,52 @@ What would you like to do?
         for blog in config_by_line:
             print blog
         file_object.close()
+
+    def cronjob(self, hour):
+        print "A cronjob is a timing based Linux event! This is how the program knows when to send an email"
+        print "This program is currently set to run once per day. But, you can manually configure this to run more than this or less."
+        minute = 0
+        if(hour.isdigit() == False):
+            print "Not a valid hour to use. Please choose a number between 1 and 24 inclusive."
+            return
+
+        if(int(hour) > 24 or int(hour < 0):
+            print "Not a valid hour to use. Please choose a number between 1 and 24 inclusive."
+            return
+
+        user = os.environ['USER']
+        directory = os.getcwd()
+
+        cron = CronTab(user=user)
+        cron_job = cron.new(command = "python {}/run.py".format(directory), comment = "For blog updater")
+        cron_job.hour.also.on(hour)
+        cron.write()
+
+        print "Your cronjob is now configured..."
+        print "Please remember, if you move this Python file redo this process. The cronjob is pointing to the run.py in this folder."
+
+    def get_hour(self):
+        while(True):
+            hour = raw_input("What hour interval would you like this to be sent?\n")
+            if(hour.isdigit() and (int(hour) <= 24 and int(hour) >= 0)):
+                return hour
+
+    def cron_interactive(self):
+        print "A cronjob is a timing based Linux event! This is how the program knows when to send an email"
+        print "This program is currently set to run once per day. But, you can manually configure this to run more than this or less."
+        minute = 0
+        hour = self.get_hour()
+
+        user = os.environ['USER']
+        directory = os.getcwd()
+
+        cron = CronTab(user=user)
+        cron_job = cron.new(command = "python {}/run.py".format(directory), comment = "For blog updater")
+        cron_job.hour.also.on(hour)
+        cron.write()
+
+        print "Your cronjob is now configured..."
+
 
 if __name__ == "__main__":
     C = CLI_Config()

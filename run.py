@@ -40,6 +40,7 @@ class run:
 
         if('-i' in commands):
             self.CLI.user_ask()
+
         elif(commands[1] == '--add_url' or commands[1] == '-add'):
             url = commands[2]
             value = commands[4]
@@ -64,6 +65,7 @@ class run:
         elif(commands[1] == '--remove_url' or commands[1] == '-remove'):
             url = commands[2]
             self.CLI.remove_url(url)
+
         elif(commands[1] == '--view' or commands[1] == '-view'):
             url = commands[2]
             if('--header' in commands or '-head' in commands):
@@ -93,13 +95,17 @@ class run:
             print "Prepaing email..."
             Client = EmailClient()
             Client.send_email(email)
+
         elif(commands[1] == '--email' or commands[1] == '--send' or commands[1] == '-send'):
             print "Preparing email..."
             Client = EmailClient()
             Client.send_email_group()
+
         elif(commands[1] == '--show' or commands[1] == '-show'):
             print "All of your followed blogs:"
             self.CLI.show_urls()
+        elif(commands[1] == '--cron' or commands[1] = '-cron'):
+            self.CLI.cronjob(commands[2])
         else:
             print "Not a valid command..."
 
