@@ -104,7 +104,7 @@ class run:
         elif(commands[1] == '--show' or commands[1] == '-show'):
             print "All of your followed blogs:"
             self.CLI.show_urls()
-        elif(commands[1] == '--cron' or commands[1] = '-cron'):
+        elif(commands[1] == '--cron' or commands[1] == '-cron'):
             self.CLI.cronjob(commands[2])
         else:
             print "Not a valid command..."

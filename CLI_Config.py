@@ -1,5 +1,6 @@
 from crontab import CronTab
 import os
+import time
 from Blog import Blog
 
 class CLI_Config:
@@ -44,14 +45,15 @@ class CLI_Config:
     def user_ask(self):
 
         decision = '-1'
-        while(decision != '5'):
+        while(decision != '6'):
             decision = raw_input("""
 What would you like to do?
 1) Add a new blog?
 2) Update a blog?
 3) Remove a blog?
 4) Display followed blogs
-5) Exit
+5) Setup cronjob
+6) Exit
 """)
             if(decision == '1'):
                 url = raw_input("What URL would you like to add?\n")
@@ -205,7 +207,7 @@ What would you like to do?
             print "Not a valid hour to use. Please choose a number between 1 and 24 inclusive."
             return
 
-        if(int(hour) > 24 or int(hour < 0):
+        if(int(hour) > 24 or int(hour < 0)):
             print "Not a valid hour to use. Please choose a number between 1 and 24 inclusive."
             return
 

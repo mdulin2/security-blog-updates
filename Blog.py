@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import datefinder
 import re
+import tweepy
 
 class Blog:
 
@@ -47,5 +48,11 @@ class Blog:
         dates_filtered = list(filter(lambda x: x.year >= 1920, dates))
         return dates_filtered
 
+
+    def get_pull_page_tweets(self):
+        auth = tweepy.BasicAuthHandler("dooflin5", "Airjordan23!?")
+        api = tweepy.API(auth)
+
 if __name__ == "__main__":
-    B = Blog("https:/krebsonsecurity.com")
+    B = Blog("@dooflin5")
+    B.get_pull_page_tweets()
