@@ -103,7 +103,7 @@ class Updater:
         date_list = self.previous_value_dict[url]
         for date in date_list:
             string_date = date.strftime("%Y-%m-%d %H:%M:%S")
-            file_object.write((unicode(string_date)+'\n'))
+            file_object.write((str(string_date)+'\n'))
         file_object.close()
         print "Write Successful... for " + url
 
@@ -113,7 +113,7 @@ class Updater:
 
         date_list = self.previous_value_dict[url]
         for date in date_list:
-            file_object.write((unicode(date)+'\n'))
+            file_object.write((str(date)+'\n'))
         file_object.close()
         print "Write Successful... for " + url
 
@@ -139,3 +139,4 @@ class Updater:
 
 if __name__ == "__main__":
     U = Updater("Urls.config")
+    U.get_updated_blog_list()

@@ -1,6 +1,6 @@
+The September 2018 Security Update Review
 Announcing Pwn2Own Tokyo for 2018
 VirtualBox 3D Acceleration: An accelerated attack surface
 Floating-Poison Math in Chakra
 Voicemail Vandalism: Getting Remote Code Execution on Microsoft Exchange Server
 The August 2018 Security Update Review
-Throwing Shade: Analysis of a Foxit Integer Overflow
