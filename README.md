@@ -1,8 +1,8 @@
 # Security Blog Updates
-The world of security has so much to offer, with so many people posting about new vulnerabilities, discovers and word around the industry.
-However, there are just so many blogs to follow! So, these scripts are meant to be used as a daily email to be sent to the user of which blogs
-have been updated that day! 
-
+![](https://media.giphy.com/media/26ufe7WwGmhaFi5J6/giphy.gif)  
+There are just too many security blogs to follow; so many great professionals and companies that we want to keep track of! It is uter choas trying to follow all of our blogs. Or, you want to keep your security team up-to-date with the security world, the new exploits and so on. 
+So, this project is mean to fix this problem. Let's clean up the mess!  
+To clean up the mess, we're going to follow all of our security blogs, with a daily email being sent to the followering of the blog. 
 ## Setup 
 
 ### Package Installer. 
