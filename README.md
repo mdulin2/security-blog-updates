@@ -49,7 +49,16 @@ The interactive version is recommended because of how easy and collaborative it 
 5) Setup the cronjob
 6) Exit 
 ```
-Everything that can be done in the interactive can also be done in the CLI. 
+For add and update here is the flow: 
+1) Select a url  
+2) Select a type of check(either a date or header tag) which was 'd' and 't'.  
+3) For date:  
+The page will be loaded, then all of the dates on the website will be shown. Type in the number that corresponds to the date that matches the blogs most recent post.  
+4) For tag(header):  
+Select the header tag then select which header(value 1-6) you would like to test against.   
+5) If the settings match what you would like, then click 'y'. Otherwise, restart the process until a valid check for the site is found. 
+
+<b>Note:</b> Everything that can be done in the interactive can also be done in the CLI and vice-versa. 
 
 ### CLI(usable): 
 The CLI has the same exact capabilities as the interactive version, but does it call by call. Without any parameters, run.py will check to see if all the blogs have been updated, then send an email to the group. 
@@ -83,8 +92,10 @@ Show all of the currently followed blogs:
 Set up the cronjob...By default, it sends an email once per day: 
 --cron hour                                                   ** -cron will also work 
 
-
 ```
+
+## Future
+I plan on adding a Twitter follower functionality to this. However, it is quite complicated for someone to use the Twitter API as a user. So, I am trying to find a way around this! 
 
 ## Issues 
 * I personally run this on an AWS instance. Which, seemed like a great idea, but because of the IP being an AWS ec2 instance, this did not work out wel. Gmail and Outlook blocks all IPs from ec2 instances, because of how much spam it tends to be. I am using my school email, which for some reason bypasses this restriction.
