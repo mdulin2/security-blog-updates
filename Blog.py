@@ -3,6 +3,11 @@ import requests
 import datefinder
 import re
 import tweepy
+import sys
+
+# Hack...
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class Blog:
 
@@ -22,14 +27,14 @@ class Blog:
         # need to have different settings for different headers
         print self.url
         request  = requests.get(self.url,'html.parser')
-        page = request.text
+        page = request.text.encode('utf-8')
         soup = BeautifulSoup(page,"lxml")
 
         if(search_type == "header"):
             header_list = []
             for header in soup.find_all(re.compile('^h['+header_type+']$')):
                 tag_re = re.compile(r'<[^>]+>')
-                header_list.append(tag_re.sub('', str(header)).replace('\n',''))
+                header_list.append(tag_re.sub('', (header.encode('utf-8'))).replace('\n',''))
             return header_list
         else:
             assert('Not implemented...Only header tag and dates are currently accepted')

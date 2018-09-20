@@ -1,2 +1,11 @@
 Security research and adventures in coordinated disclosure
 XSS Vulnerabilities in Multiple iFrame Busters Affecting Top Tier Sites
+Compromising OpenDrive’s Cloud Storage Accounts – Or How Not to Design Session Management
+Persistent XSS in PNC’s Secure Email System
+Reverse Engineering the OBi200 Google Voice Appliance: Part 3
+Reverse Engineering the OBi200 Google Voice Appliance: Part 2
+Reverse Engineering the OBi200 Google Voice Appliance: Part 1
+Bright City: A Highly Insecure Police and Municipal Government App
+XSS over SMS: Hacking Text Messages in Verizon Messages
+Rave Panic Button: Vulnerabilities in a Nationwide Emergency Alert System
+Persistent XSS in Verizon’s Webmail Client

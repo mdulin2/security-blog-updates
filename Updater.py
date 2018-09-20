@@ -1,6 +1,12 @@
 import os.path
+import sys
 from datetime import datetime
 from Blog import Blog
+
+# This is a super hack... Not good to use.
+# I could not figure out where the encoding issue was happening, so I just went with the back.
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class Updater:
 
@@ -68,6 +74,10 @@ class Updater:
         elif(comparison_type == 'header'):
 
             urls_list_previous = self.read_previous_tags_from_file(url)
+
+            for elt in range(len(urls_list_current)):
+                print urls_list_previous[elt]
+                print urls_list_current[elt]
             return not urls_list_current == urls_list_previous
 
     # Checks to see if a file already exists for this url or not.
@@ -103,7 +113,7 @@ class Updater:
         date_list = self.previous_value_dict[url]
         for date in date_list:
             string_date = date.strftime("%Y-%m-%d %H:%M:%S")
-            file_object.write((str(string_date)+'\n'))
+            file_object.write((string_date.encode('utf-8')+'\n'))
         file_object.close()
         print "Write Successful... for " + url
 
@@ -111,9 +121,9 @@ class Updater:
         filename = self.get_filename(url)
         file_object = open('./storage_info/' + filename,"w+")
 
-        date_list = self.previous_value_dict[url]
-        for date in date_list:
-            file_object.write((date.encode('utf8')+'\n'))
+        tag_list = self.previous_value_dict[url]
+        for tag in tag_list:
+            file_object.write(tag.decode('utf-8') +'\n')
         file_object.close()
         print "Write Successful... for " + url
 
