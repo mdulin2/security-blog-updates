@@ -76,8 +76,6 @@ class Updater:
             urls_list_previous = self.read_previous_tags_from_file(url)
 
             for elt in range(len(urls_list_current)):
-                print urls_list_previous[elt]
-                print urls_list_current[elt]
             return not urls_list_current == urls_list_previous
 
     # Checks to see if a file already exists for this url or not.
