@@ -1,0 +1,25 @@
+Disclose private attachments in Facebook Messenger Infrastructure - 15,000$
+Modern BinaryExploitation Writeups-II
+Bypassing rate limit abusing misconfiguration rules
+Valentine-A HackTheBox Writeup
+How we ranked 4th in SHELL-CTF 0x01 (Writeup)
+Bashed — A HackTheBox Writeup
+KRACK-JIIT CTF Writeup
+Nullcon CTF HackIM - Crypto 2FUN Writeup
+Nullcon-HackIM CTF 2019- MLAuth-Misc(500)Writeup
+Modern BinaryExploitation Writeups
+How I found a simple bug in Facebook without any Test
+HackTheBox Write-Up —Lame
+5 Tips for OSCP Prep
+FireShell CTF 2019 | WEB (Vice) Writeup
+How I made a programmable hacking usb device to infiltrate PCs?
+Antihack.me Blind XSS To PHP File Upload Vulnerability
+Frappé Technologies ERPNext Server Side Template Injection
+How I cracked CEH, CHFI &amp; ESCA certifications within 20 days?
+Hack Your Form — New vector for Blind XSS
+Workplace Logo ID to workplace owner name DisclosureFacebook Bug Bo...
+Gradle Plugin Portal: Clickjacking &amp; Cross-Site Request Forgery ena...
+When Cookie Hijacking + HTML Injection become dangerous
+Reporting CSRF via OBB
+Cookie Based Self-XSS to Good XSS
+Inter-application vulnerabilities and HTTP header issues.

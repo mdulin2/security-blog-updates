@@ -54,7 +54,10 @@ Hey! Security blogs are amazing! So, here's your custom list of followed blogs t
             msg += blogs_updated
             msg += "\n Have a wonderful rest of your day; and happy reading!\n"
             msg += "This blog follower list was created by Maxwell Dulin at http://maxwelldulin.com"
-        return msg
+        
+        subject="Security Blog Post Update"  
+        message = "Subject: {}\n\n{}".format(subject,msg) 
+        return message
 
     def close_connection(self):
         self.server.quit()

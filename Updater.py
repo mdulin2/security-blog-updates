@@ -61,7 +61,7 @@ class Updater:
         if(comparison_type == 'date'):
             urls_list_previous = self.read_previous_dates_from_file(url)
             # particular date that's being checked
-            if(comparison_value.isdigit()):
+            if(comparison_value.isdigit() and comparison_value <len(urls_list_current)):
                 if(str(urls_list_current[int(comparison_value)-1]) == urls_list_previous[int(comparison_value)-1].replace('\n','')):
                     return False
                 return True
@@ -75,7 +75,7 @@ class Updater:
 
             urls_list_previous = self.read_previous_tags_from_file(url)
 
-            for elt in range(len(urls_list_current)):
+            
             return not urls_list_current == urls_list_previous
 
     # Checks to see if a file already exists for this url or not.

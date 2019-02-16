@@ -1,0 +1,10 @@
+Bypass password confirmation in Facebook “DYI” feature
+Facebook CSRF protection bypass which leads to Account Takeover.
+Export Facebook audience network reports of any business
+Leak of private/in-development app ids, names and translation requests
+Internal paths disclosure due to improper exception handling
+Enroll in Facebook Ad-break program without Facebook approval
+Disclose page violations and its eligibility to use Ad-breaks
+Disclose page’s admins and its Monetization payout details
+Disclose Instagram business account linked to a Facebook page
+Change payment account of any Facebook commerce page

@@ -1,6 +1,10 @@
-Pivot! PIVOT! – Reaching Unreachable Vulnerable Code in Industrial IoT Platforms
-The September 2018 Security Update Review
-Announcing Pwn2Own Tokyo for 2018
-VirtualBox 3D Acceleration: An accelerated attack surface
-Floating-Poison Math in Chakra
-Voicemail Vandalism: Getting Remote Code Execution on Microsoft Exchange Server
+The February 2019 Security Update Review
+Using the Weblinks API to Reach JavaScript UAFs in Adobe Reader
+Implementing Fuzz Logics with Dharma
+Of ISOs and Attorneys: Legal Action in Vulnerability Disclosure
+The ZDI 2018 Retrospective
+Pwn2Own Vancouver 2019: Tesla, VMware, Microsoft, and More
+The January 2019 Security Update Review
+ZDI-18-1372 – The Elegant Bypass
+Really Check Errors: Pointing to the Object of your Desire
+An Insincere Form of Flattery: Impersonating Users on Microsoft Exchange 

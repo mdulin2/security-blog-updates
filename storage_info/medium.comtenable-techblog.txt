@@ -1,11 +1,13 @@
-Advantech WebAccess Unpatched RCE
-Summary
-Adapting a Cloud-Based Continuous Integration Pipeline to an On-Premises Product
-Simulating enterprise networks in development using the Docker networking stack
-Universe in a Bottle
-Reverse Shell from an OpenVPN Configuration File
-Automated Reconciliation of Vulnerability Detection Across Scan Engines
-Sharing is Caring
-Migrating Tenable.io’s UI to a Component Based Architecture — Part I
-Tenable.io’s Architecture — How we got here and where we’re going.
-Welcome to the Tenable TechBlog
+Make It Rain with MikroTik
+Can you hear me in the… front?
+Poppin’ Calc: Web Studio Edition
+What Even Are You?
+Reversing the Rachio Smart Sprinkler Controller
+Rooting Nagios Via Outdated Libraries
+Trumping Physical Security with Software Insecurity
+Exploiting an 18 Year Old Bug
+CSRF is No Joke
+Remotely Exploiting Zoom Meetings
+PLC Bug Hunt
+A Team Building Activity
+UAC Bypass by Mocking Trusted Directories

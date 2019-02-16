@@ -1,7 +1,24 @@
+Sorry, Adobe Reader, We're Not Letting You Phone Home Without User's Consent (CVE-2019-7089)
+Analysis
+The Micropatch 
+Conclusion
+One... Two... Three Micropatches For Three Windows 0days
+0day #1: the "angrypolarbearbug" 
+0day #2: the "readfile"
+0day #3: the "Windows Contacts arbitrary code execution"
+Patching, Re-Patching and Meta-Patching the Jet Database Engine RCE (CVE-2018-8423)
+Words "Patching" and "Instantly" Now in the Same Phrase
+Outrunning the attackers at a 0day in Microsoft Jet Database Engine
+We Also Micropatched a Publicly Dropped 0day in Task Scheduler (CVE-2018-8440) Ahead of Microsoft
+Famous CVE-2018-8174 – a micropatch instead of the official update that probably broke your network
+CVE-2018-8414 – initially rejected for patching by Microsoft
+Outrunning Attackers On The Jet Database Engine 0day (CVE-2018-8423)
+Timeline
+ 
+Introduction
+Vulnerability Analysis
+The Micropatch 
+How Can You Get These Micropatches, And What To Do Next?
 Comparing Our Micropatch With Microsoft's Official Patch For CVE-2018-8440
 How We Micropatched a Publicly Dropped 0day in Task Scheduler (CVE-2018-8440)
 Being Who You Are Can be a Bad Thing if You're a System Service
-0patching Foxit Reader Buffer... Oops... Integer Overflow (CVE-2017-17557)
-Windows Updates Broke Your Networking? Free Micropatches To The Rescue (CVE-2018-8174)
-Security Patching is Hard - Survey Results 2017
-Two Interesting Micropatches For 7-Zip (CVE-2017-17969 and CVE-2018-5996)
